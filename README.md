@@ -1,4 +1,4 @@
-# [`static.hammerill.com`](https://static.hammerill.com/)
+# [`hammerill.github.io`](https://hammerill.github.io/) or [`static.hammerill.com`](https://static.hammerill.com/)
 Static export of my website, [`hammerill.com`](https://hammerill.com/).
 
 No. I won't give you the source code of the site itself (yet).
@@ -21,7 +21,7 @@ location / {
 ...
 ```
 
-And `static.hammerill.com` server block:
+And `static.hammerill.com` server block (you have to respect that order in `try_files`!):
 ```nginx
 ...
 
@@ -41,5 +41,8 @@ location / {
 
 👎 Cons:
 - **Stupid**. As there's no server in behind, requests cannot be handled correctly. For example:
-    * **No middleware**. In case with this site it means that accessing root will forcefully take you to the English version, not your language amongst supported (EN|FR|RU|UA).
+    * **No middleware**. In case with this site it means that accessing root will forcefully take you to the English version, not your language amongst supported (`en|fr|ru|ua`).
     * **No image optimization**. If you upload 4K img to your site, it will literally send it like that to the client.
+    * **No metadata**. SEO bots won't comprehend a lot of things, when they could if you used the SEO data generators in the server.
+- Those are only the things that affected my website at the current state.
+  What we're losing is the backend side in general, like fetching data from a source and sending it to the client.

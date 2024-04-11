@@ -36,7 +36,7 @@ location / {
 
 ## Pros and Cons
 👍 Pros:
-- **Independent**. Doesn't depend on some kind of server. Only static hosting (CDN) is required.
+- **Independent**. Doesn't depend on some kind of server. Only static hosting (CDN) is required. I can even [host it on GitHub](https://hammerill.github.io/) for free.
 - **Very fast**. Probably faster than the Next.js app, but one has to test.
 
 👎 Cons:

@@ -25,7 +25,13 @@ And `static.hammerill.com` server block (you have to respect that order in `try_
 ```nginx
 ...
 
+root /var/www/static.hammerill.com/;
 index index.html;
+
+# Redirect trailing slashes (e.g. '.../en/' -> '.../en')
+location ~ ^(.+)/$ {
+    return 301 $scheme://$host$1;
+}
 
 location / {
     try_files $uri $uri.html $uri/ =404;

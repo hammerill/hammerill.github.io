@@ -3,6 +3,8 @@ Static export of my website, [`hammerill.com`](https://hammerill.com/).
 
 No. I won't give you the source code of the site itself (yet).
 
+Also I push changes here automatically. That's why you'll only see the commits named "Update static export".
+
 ## Usage
 Static export could be useful when server side has some troubles handling requests.
 And here, it doesn't even think: just dumbly returning HTML, CSS and JS.
@@ -24,10 +26,12 @@ And `static.hammerill.com` server block (you have to respect that order in `try_
 ...
 root /var/www/static.hammerill.com/;
 index index.html;
+
 # Redirect trailing slashes (e.g. '.../en/' -> '.../en')
 location ~ ^(.+)/$ {
     return 301 $scheme://$host$1;
 }
+
 location / {
     try_files $uri $uri.html $uri/ =404;
 }

@@ -18,7 +18,7 @@
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */let r=(0,n(3480).Z)("Circle",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}]])},1458:function(e,t,n){"use strict";n.d(t,{Z:function(){return r}});/**
+ */let r=(0,n(3480).Z)("Circle",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}]])},1005:function(e,t,n){"use strict";n.d(t,{Z:function(){return r}});/**
  * @license lucide-react v0.363.0 - ISC
  *
  * This source code is licensed under the ISC license.
